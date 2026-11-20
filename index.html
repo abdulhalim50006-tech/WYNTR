@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="WYNTR — Modern clothing and fashion. Discover your style.">
+<title>WYNTR | Clothing & Fashion</title>
+<style>
+:root{--black:#090909;--white:#fff;--muted:#a5a5a5;--line:#e8e8e8;--soft:#f5f5f5}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,"Noto Sans Bengali",sans-serif;color:var(--black);background:#fff}
+a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}
+.announcement{background:#090909;color:#fff;text-align:center;padding:10px;font-size:12px;letter-spacing:1.4px}
+header{position:sticky;top:0;z-index:10;background:#fff;border-bottom:1px solid var(--line)}
+.nav{max-width:1180px;margin:auto;padding:18px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.logo{font-size:29px;font-weight:900;letter-spacing:5px}.navlinks{display:flex;gap:28px;font-size:13px;text-transform:uppercase;letter-spacing:1px}
+.menu{display:none;border:0;background:none;font-size:24px}
+.hero{background:#0b0b0b;color:#fff;min-height:520px;display:grid;grid-template-columns:1fr 1fr;align-items:center}
+.hero-copy{padding:70px max(30px,calc((100vw - 1180px)/2));padding-right:30px}
+.eyebrow{font-size:11px;letter-spacing:3px;color:#bbb;text-transform:uppercase}
+h1{font-size:clamp(44px,6vw,76px);line-height:.98;letter-spacing:-3px;margin:20px 0}
+.hero p{color:#c6c6c6;line-height:1.8;max-width:430px}
+.btn{display:inline-block;background:#fff;color:#090909;padding:15px 25px;border:1px solid #fff;font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;cursor:pointer}
+.btn.dark{background:#090909;color:#fff;border-color:#090909}.hero-art{height:100%;min-height:520px;background:linear-gradient(135deg,#333,#111 55%,#555);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.hero-art:before{content:"W";font-size:min(65vw,520px);font-weight:900;color:#ffffff0b;position:absolute}
+.hero-art span{font-size:13px;letter-spacing:7px;border:1px solid #ffffff70;padding:20px 28px;z-index:1}
+section{max-width:1180px;margin:auto;padding:80px 22px}
+.section-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:30px;gap:20px}
+h2{font-size:32px;letter-spacing:-1px;margin:0}.sub{color:#777;font-size:13px;margin-top:9px}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.product{border:1px solid var(--line);background:#fff}
+.product-img{height:300px;background:linear-gradient(145deg,#eee,#cfcfcf);display:flex;align-items:center;justify-content:center;color:#777;font-size:12px;letter-spacing:2px;position:relative}
+.product-img:after{content:"WYNTR";font-weight:900;font-size:42px;letter-spacing:6px;color:#00000015}
+.product-info{padding:17px}.product-info h3{font-size:15px;margin:0 0 8px}.price{font-size:14px;font-weight:700}.product-info p{font-size:12px;color:#777;line-height:1.6}
+.actions{display:flex;gap:8px;margin-top:14px}.actions button{flex:1;padding:11px 8px;font-size:11px;letter-spacing:.6px}
+.outline{background:#fff;border:1px solid #111;cursor:pointer}
+.about{background:#f5f5f5;max-width:none}.about-inner{max-width:1180px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;padding:75px 22px}
+.about-mark{background:#111;color:#fff;min-height:280px;display:flex;align-items:center;justify-content:center;font-size:clamp(55px,9vw,110px);font-weight:900;letter-spacing:8px}
+.about p{color:#666;line-height:1.9;font-size:14px}
+.order{background:#090909;color:#fff;max-width:none}.order-inner{max-width:850px;margin:auto;padding:75px 22px}.order .sub{color:#aaa}
+form{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:28px}
+input,textarea,select{width:100%;padding:14px;border:1px solid #444;background:#171717;color:#fff;outline:none}
+textarea{grid-column:1/-1;min-height:100px;resize:vertical}
+form button{grid-column:1/-1;justify-self:start}
+.contact{display:flex;justify-content:space-between;gap:30px;align-items:center}
+footer{background:#050505;color:#fff;padding:30px 22px;text-align:center}
+footer .logo{font-size:24px}footer p{font-size:11px;color:#999;letter-spacing:1px}
+.note{font-size:11px;color:#999;line-height:1.7;margin-top:18px}
+@media(max-width:700px){.navlinks{display:none}.menu{display:block}.hero{grid-template-columns:1fr}.hero-copy{padding:65px 24px}.hero-art{min-height:260px}.products{grid-template-columns:1fr 1fr;gap:12px}.product-img{height:190px}.product-info{padding:12px}.actions{flex-direction:column}.about-inner{grid-template-columns:1fr;gap:25px;padding:50px 22px}section{padding:55px 18px}.section-head{align-items:start;flex-direction:column}form{grid-template-columns:1fr}textarea,form button{grid-column:1}.contact{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="announcement">WELCOME TO WYNTR — NEW STYLE. NEW YOU.</div>
+<header><nav class="nav"><a class="logo" href="#">WYNTR</a><div class="navlinks"><a href="#home">Home</a><a href="#shop">Shop</a><a href="#about">About</a><a href="#order">Order</a><a href="#contact">Contact</a></div><button class="menu" onclick="document.querySelector('.navlinks').style.display='flex'">☰</button></nav></header>
+<main>
+<div class="hero" id="home"><div class="hero-copy"><div class="eyebrow">Clothing · Fashion · Lifestyle</div><h1>STYLE THAT<br>DEFINES YOU.</h1><p>Discover everyday essentials and standout looks with WYNTR. Clean style, confident living.</p><a class="btn" href="#shop">Explore Collection</a></div><div class="hero-art"><span>THE WYNTR COLLECTION</span></div></div>
+<section id="shop"><div class="section-head"><div><div class="eyebrow" style="color:#777">CURATED FOR YOU</div><h2>Featured Collection</h2><div class="sub">আপনার পছন্দের স্টাইল বেছে নিন।</div></div><div class="sub">প্রোডাক্ট ও দাম পরিবর্তনযোগ্য</div></div>
+<div class="products">
+<article class="product"><div class="product-img">PRODUCT IMAGE</div><div class="product-info"><h3>Classic WYNTR Tee</h3><div class="price">৳ ৬৫০</div><p>Minimal everyday style. Sizes: M, L, XL, XXL</p><div class="actions"><button class="btn dark" onclick="quickOrder('Classic WYNTR Tee')">অর্ডার করুন</button><button class="outline" onclick="whatsapp('Classic WYNTR Tee')">WhatsApp</button></div></div></article>
+<article class="product"><div class="product-img">PRODUCT IMAGE</div><div class="product-info"><h3>Urban Oversized Tee</h3><div class="price">৳ ৮৫০</div><p>Relaxed fit with a modern look. Sizes: M, L, XL, XXL</p><div class="actions"><button class="btn dark" onclick="quickOrder('Urban Oversized Tee')">অর্ডার করুন</button><button class="outline" onclick="whatsapp('Urban Oversized Tee')">WhatsApp</button></div></div></article>
+<article class="product"><div class="product-img">PRODUCT IMAGE</div><div class="product-info"><h3>Essential Hoodie</h3><div class="price">৳ ১,২৫০</div><p>Comfort-focused streetwear. Sizes: M, L, XL, XXL</p><div class="actions"><button class="btn dark" onclick="quickOrder('Essential Hoodie')">অর্ডার করুন</button><button class="outline" onclick="whatsapp('Essential Hoodie')">WhatsApp</button></div></div></article>
+</div><p class="note">নোট: এখানে নমুনা পণ্য ও দাম দেওয়া হয়েছে। আপনার আসল পণ্যের ছবি, নাম, সাইজ ও দাম বসিয়ে নেবেন।</p></section>
+<div class="about" id="about"><div class="about-inner"><div class="about-mark">WYNTR</div><div><div class="eyebrow" style="color:#777">OUR STORY</div><h2>More than fashion.</h2><p>WYNTR একটি Clothing & Fashion Brand। আমাদের লক্ষ্য হলো সহজ, আধুনিক এবং আত্মবিশ্বাসী স্টাইলকে সবার কাছে পৌঁছে দেওয়া। আপনার প্রতিদিনের লুক হোক নিজের মতো—এটাই WYNTR-এর ভাবনা।</p><a class="btn dark" href="#shop">Shop Now</a></div></div></div>
+<div class="order" id="order"><div class="order-inner"><div class="eyebrow">PLACE YOUR ORDER</div><h2>অর্ডার করুন</h2><div class="sub">নিচের ফর্ম পূরণ করুন। আপনার অর্ডারের তথ্য WhatsApp-এ পাঠানো হবে।</div>
+<form id="orderForm"><input id="name" placeholder="আপনার নাম" required><input id="phone" placeholder="মোবাইল নম্বর" required><input id="product" placeholder="পণ্যের নাম" required><select id="size" required><option value="">সাইজ নির্বাচন করুন</option><option>S</option><option>M</option><option>L</option><option>XL</option><option>XXL</option></select><input id="qty" type="number" min="1" value="1" placeholder="পরিমাণ"><textarea id="address" placeholder="সম্পূর্ণ ঠিকানা" required></textarea><button class="btn" type="submit">Submit Order</button></form><p class="note">অর্ডার সাবমিট করলে WhatsApp খুলবে। সেখানে মেসেজটি পাঠিয়ে অর্ডার নিশ্চিত করুন।</p></div></div>
+<section id="contact"><div class="contact"><div><div class="eyebrow" style="color:#777">GET IN TOUCH</div><h2>Let's talk style.</h2><div class="sub">অর্ডার বা যেকোনো তথ্যের জন্য যোগাযোগ করুন।</div></div><div><p><b>Brand:</b> WYNTR</p><p><b>WhatsApp:</b> <span id="phoneDisplay">আপনার নম্বর যোগ করুন</span></p><p><b>Facebook:</b> আপনার Facebook Page লিংক যোগ করুন</p></div></div></section>
+</main>
+<footer><div class="logo">WYNTR</div><p>STYLE THAT DEFINES YOU.</p><p>© <span id="year"></span> WYNTR. ALL RIGHTS RESERVED.</p></footer>
+<script>
+/* IMPORTANT: Replace this with your WhatsApp number including country code, without + or spaces.
+   Example Bangladesh: 8801XXXXXXXXX */
+const WHATSAPP_NUMBER = "8801XXXXXXXXX";
+document.getElementById("year").textContent = new Date().getFullYear();
+function whatsapp(product){const msg=`আসসালামু আলাইকুম, WYNTR থেকে ${product} অর্ডার করতে চাই।`;openWhatsApp(msg)}
+function quickOrder(product){document.getElementById("product").value=product;document.getElementById("order").scrollIntoView({behavior:"smooth"})}
+function openWhatsApp(message){
+ if(WHATSAPP_NUMBER==="8801XXXXXXXXX"){alert("প্রথমে index.html ফাইলে WHATSAPP_NUMBER-এর জায়গায় আপনার WhatsApp নম্বর বসান।");return}
+ window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(message),"_blank");
+}
+document.getElementById("orderForm").addEventListener("submit",function(e){
+ e.preventDefault();
+ const msg=`WYNTR ORDER%0Aনাম: ${document.getElementById("name").value}%0Aফোন: ${document.getElementById("phone").value}%0Aপণ্য: ${document.getElementById("product").value}%0Aসাইজ: ${document.getElementById("size").value}%0Aপরিমাণ: ${document.getElementById("qty").value}%0Aঠিকানা: ${document.getElementById("address").value}`;
+ openWhatsApp(decodeURIComponent(msg));
+});
+</script>
+</body></html>
